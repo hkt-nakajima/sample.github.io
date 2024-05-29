@@ -1,0 +1,96 @@
+h1{
+    font-size: 24px;
+    text-align: center;
+    margin: 40px 0;
+}
+.map-container{
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    border: solid 1px #ccc;
+    background-color: #ececec;
+    position: relative;
+    z-index: 10;
+}
+.map-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 20;
+    user-select: none;
+
+}
+.map-image img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.pins{
+}
+.pin{
+    position: absolute;
+    top: 49%;
+    left: 77%;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 8px;
+    box-sizing: content-box;
+    z-index: 100;
+    text-shadow: 0 0 8px #8888;
+}
+.pin > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #558bff;
+    filter: drop-shadow(3px 3px 5px #00000096);
+}
+.pin-contents-box{
+    display: block;
+    width: 300px;
+    height: 600px;
+    position: absolute;
+    /* bottom: 100%; */
+    left: 0;
+    box-shadow: 0 0 8px #8888;
+    background-color: #fff;
+    z-index: 100;
+    cursor: auto;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: all .3s ease-in-out;
+    padding-bottom: 40px;
+}
+.pin:hover .pin-contents-box{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+.pin-contents-image{
+    width: 100%;
+    height: auto;
+}
+.pin-contents-image img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.pin-contents-box p {
+    margin-top: 16px;
+    line-height: 1.7;
+    padding: 0 20px;
+}
+.pin-contents-box a {
+    margin-top: 16px;
+    line-height: 1.7;
+    padding: 0 20px;
+    color: #558bff;
+    text-decoration: underline;
+}
